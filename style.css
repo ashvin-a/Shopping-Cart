@@ -33,7 +33,7 @@ body {
 }
 
 .navbar * {
-    margin: 10px;
+    margin: 8px;
     cursor: pointer;
 }
 
@@ -45,7 +45,11 @@ body {
     font-size: 20px;
     border-radius: 5px;
 }
-
+.navbar i{
+    padding: 20px 5px;
+    border: 0.5px solid #cccccc00;
+    border-radius: 10px;
+}
 .navbar a:hover {
     background-color: #ccc;
 }
@@ -54,11 +58,11 @@ body {
     align-items: center;
 }
 .search i{
-    padding: 10px;  
+    padding: 20px 10px; 
     margin-left: -5px;
     border-radius: 5px;
 }
-.search i:hover{
+i:hover{
 
     background-color: #ccc;
 }
@@ -72,6 +76,10 @@ input[type='search'] {
     background-color: #cccccc4d;
     font-size: 16px;
     font-family: 'Greycliff';
+}
+
+input[type='search']:hover{
+    box-shadow:1px 0px 1px 4px rgba(255, 255, 255, 0.192) ;
 }
 
 input[type='search']:focus {
