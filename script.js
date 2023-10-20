@@ -1,100 +1,72 @@
-const electronic_filter = document.querySelector('.ele');
-const fashion_filter = document.querySelector('.fash');
-const food_filter = document.querySelector('.foo');
-const kid_filter = document.querySelector('.kid');
-const home_filter = document.querySelector('.hom');
-const book_filter = document.querySelector('.books');
+const grid = document.querySelector('.item-grid');
+const filter = document.querySelector('.filter');
+const add = document.getElementById('addtocart');
+
+function addToCart(e) {
+    e.preventDefault();
+    console.log('heh');
+}
+
+function filterIt(e) {
+    const items = document.querySelectorAll('.item');
+    e.target.classList.toggle('active');
+    if (e.target.classList.contains('active')) {
+        items.forEach((item) => {
+            if (!e.target.classList.contains(item.classList[0])) {
+                item.style.display = 'none';
+            }
+        });
+    } else {
+        items.forEach((item) => {
+            if (!e.target.classList.contains(item.classList[0])) {
+                item.style.display = 'block';
+            }
+        });
+    }
+}
+function buildPage(data) {
+    const div = document.createElement('div');
+    const div2 = document.createElement('div');
+    const addToCart = document.createElement('div');
+    const tag = document.createElement('div');
+    tag.className = 'tag';
+    addToCart.id = 'addtocart';
+    addToCart.style.textAlign = 'justify';
+    div.className = data.class;
+    div2.className = data.class;
+    tag.innerHTML = `<span class='name'>${data.name}</span>
+    <span class='price'>₹${data.price}</span>`;
+    addToCart.innerHTML = `<button>Add to Cart</button>`;
+    div.appendChild(div2);
+    div.style.boxShadow = '10px 10px 10px 10px rgba(0, 0, 0, 0.2)';
+    div.classList.add('item');
+    div2.innerHTML = `<img src="images/${data.image}" alt="" />`;
+    if (
+        div.classList.contains('books') ||
+        div.classList.contains('food') ||
+        div.classList.contains('kids')
+    ) {
+        div2.innerHTML = `<img src="images/${data.image}" alt=""
+        style="width:170px"/>`;
+    }
+    div2.appendChild(tag);
+    div2.appendChild(addToCart);
+    grid.appendChild(div);
+}
 
 async function getData() {
     const res = await fetch('./items.json');
-    const data = await res.json();
-    console.log(data);
+    const datas = await res.json();
+
+    datas.forEach((data) => {
+        buildPage(data);
+    });
 }
 
-function init(){
-    document.addEventListener('DOMContentLoaded',getData)
+function init() {
+    document.addEventListener('DOMContentLoaded', getData);
+    filter.addEventListener('click', filterIt);
+    add.addEventListener('click', addToCart);
 }
 
-init()
-
-
-// // const master_filter = document.querySelectorAll('.ele' ,'.fash','.foo','.kid','.hom','.books')
-// const items = document.querySelectorAll('.item');
-
-// const filter = (key) => {
-//     items.forEach((item) => {
-//         if (!item.classList.contains(key)) {
-//             item.style.display = 'none';
-//         }
-//     });
-// };
-// const unfilter = (key) => {
-//     items.forEach((item) => {
-//         if (!item.classList.contains(key)) {
-//             item.style.display = 'block';
-//         }
-//     });
-// };
-// const filterOutElec = () => {
-//     electronic_filter.style.backgroundColor = '#ccc';
-//     filter('electronics');
-// };
-// const unfilterElec = () => {
-//     electronic_filter.style.backgroundColor = '#ffffff';
-//     unfilter('electronics');
-// };
-// const filterOutFash = () => {
-//     fashion_filter.style.backgroundColor = '#ccc';
-//     filter('fashion');
-// };
-// const unfilterFash = () => {
-//     fashion_filter.style.backgroundColor = '#ffffff';
-//     unfilter('fashion');
-// };
-// const filterOutFood = () => {
-//     food_filter.style.backgroundColor = '#ccc';
-//     filter('food');
-// };
-// const unfilterFood = () => {
-//     food_filter.style.backgroundColor = '#ffffff';
-//     unfilter('food');
-// };
-// const filterOutKid = () => {
-//     kid_filter.style.backgroundColor = '#ccc';
-//     filter('kids');
-// };
-// const unfilterKid = () => {
-//     kid_filter.style.backgroundColor = '#ffffff';
-//     unfilter('kids');
-// };
-// const filterOutHome = () => {
-//     home_filter.style.backgroundColor = '#ccc';
-//     filter('home');
-// };
-// const unfilterHome = () => {
-//     home_filter.style.backgroundColor = '#ffffff';
-//     unfilter('home');
-// };
-// const filterOutBook = () => {
-//     book_filter.style.backgroundColor = '#ccc';
-//     filter('book');
-// };
-// const unfilterBook = () => {
-//     book_filter.style.backgroundColor = '#ffffff';
-//     unfilter('book');
-// };
-// electronic_filter.addEventListener('click', filterOutElec);
-// fashion_filter.addEventListener('click', filterOutFash);
-// food_filter.addEventListener('click', filterOutFood);
-// kid_filter.addEventListener('click', filterOutKid);
-// home_filter.addEventListener('click', filterOutHome);
-// book_filter.addEventListener('click', filterOutBook);
-
-// electronic_filter.addEventListener('dblclick',unfilterElec);
-// fashion_filter.addEventListener('dblclick',unfilterFash);
-// food_filter.addEventListener('dblclick',unfilterFood);
-// kid_filter.addEventListener('dblclick',unfilterKid);
-// home_filter.addEventListener('dblclick',unfilterHome);
-// book_filter.addEventListener('dblclick',unfilterBook);
-
-// // console.log(ele)
+init();
