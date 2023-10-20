@@ -122,7 +122,7 @@ input[type='search']:focus {
 .item-grid {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 20px;
+    grid-gap: 25px;
     margin: 20px;
     margin-top: 210px;
 }
@@ -163,6 +163,7 @@ input[type='search']:focus {
     padding: 10px;
     text-align: justify;
     font-family: 'Greycliff';
+
 }
 
 .description .name,
