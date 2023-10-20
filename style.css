@@ -46,9 +46,17 @@ body {
     padding: 20px 60px;
     border: 0.5px solid #cccccc00;
     background-color: #ffffff;
+    font-family: 'Greycliff';
+    font-size: 18px;
 }
 .sm-filter:hover {
     background-color: #cccccc8e;
+}
+.active{
+    background-color: #ccc;
+}
+.active:hover{
+    background-color: #ccc;
 }
 .navbar {
     z-index: 1;
