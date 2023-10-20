@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Greycliff';
     src: url(/Demo_Fonts/Fontspring-DEMO-greycliffcf-light.otf);
-} 
+}
 
 * {
     margin: 0px;
@@ -19,13 +19,13 @@ body {
     flex-direction: column;
     overflow-x: hidden;
 }
-.top{
+.top {
     z-index: 1;
     display: flex;
     flex-direction: column;
     position: relative;
 }
-.filter{
+.filter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap: 0px;
@@ -34,20 +34,21 @@ body {
     /* height: 40px; */
     width: 100%;
     background-color: #ffffff;
-    top:0px;
+    top: 0px;
     left: 0px;
     /* margin-bottom: 10px; */
     margin-top: 71px;
-    align-items:baseline;
+    align-items: baseline;
     justify-items: center;
     box-shadow: 10px 1px 10px 10px rgba(166, 166, 166, 0.703);
 }
-.sm-filter{
+.sm-filter {
     padding: 20px 60px;
-
+    border: 0.5px solid #cccccc00;
+    background-color: #ffffff;
 }
-.sm-filter:hover{
-    background-color:#cccccc8e ;
+.sm-filter:hover {
+    background-color: #cccccc8e;
 }
 .navbar {
     z-index: 1;
@@ -59,9 +60,9 @@ body {
     justify-content: space-evenly;
     height: 30px;
     border: 0.5px solid rgba(255, 255, 255, 0.021);
-    background-color:  #ffffff;
+    background-color: #ffffff;
 }
-.none{
+.none {
     display: none;
 }
 .navbar * {
@@ -77,7 +78,7 @@ body {
     font-size: 20px;
     border-radius: 5px;
 }
-.navbar i{
+.navbar i {
     padding: 20px 5px;
     border: 0.5px solid #cccccc00;
     border-radius: 10px;
@@ -89,13 +90,12 @@ body {
     display: flex;
     align-items: center;
 }
-.search i{
-    padding: 20px 10px; 
+.search i {
+    padding: 20px 10px;
     /* margin-left: -5px; */
     border-radius: 5px;
 }
-i:hover{
-
+i:hover {
     background-color: #ccc;
 }
 
@@ -110,8 +110,8 @@ input[type='search'] {
     font-family: 'Greycliff';
 }
 
-input[type='search']:hover{
-    box-shadow:1px 0px 1px 4px rgba(255, 255, 255, 0.192) ;
+input[type='search']:hover {
+    box-shadow: 1px 0px 1px 4px rgba(255, 255, 255, 0.192);
 }
 
 input[type='search']:focus {
@@ -128,42 +128,46 @@ input[type='search']:focus {
 }
 
 .item {
-    background-color: #e2e2e2cc;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     border: 0.5px solid #cccccc00;
-    border-radius: 10px;
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
 }
-.item:hover .description{
+.item:hover .description {
     bottom: 0;
 }
 
-.item img{
+.item img {
     height: 200px;
-    width: 350px;
+    width: 300px;
 }
-.item p{
+.item p {
     z-index: 0;
     text-align: justify;
     font-family: 'Greycliff';
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
-.electronics{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.description{
+.description {
     position: absolute;
-    bottom: -80px; 
-    width: 100%;
-    background-color: #e2e2e2cc;
+    bottom: -110px;
+    width: 99%;
+    background-color: #ffffff;
     color: #000000;
     transition: 0.2s ease;
+    left: -7px;
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Greycliff';
 }
 
+.description .name,
+.description .price {
+    color: steelblue;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
