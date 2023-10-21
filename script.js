@@ -1,9 +1,10 @@
 const grid = document.querySelector('.item-grid');
 const filter = document.querySelector('.filter');
-const add = document.getElementById('addtocart');
-
+const items = grid.querySelectorAll('.item')
+// console.log(items)
 function addToCart(e) {
     e.preventDefault();
+    // const cart = document.querySelectorAll('.addtocart')
     console.log('heh');
 }
 
@@ -24,13 +25,15 @@ function filterIt(e) {
         });
     }
 }
+
+
 function buildPage(data) {
+    const addToCart = document.createElement('div');
     const div = document.createElement('div');
     const div2 = document.createElement('div');
-    const addToCart = document.createElement('div');
     const tag = document.createElement('div');
     tag.className = 'tag';
-    addToCart.id = 'addtocart';
+    addToCart.className = 'addtocart';
     addToCart.style.textAlign = 'justify';
     div.className = data.class;
     div2.className = data.class;
@@ -66,7 +69,7 @@ async function getData() {
 function init() {
     document.addEventListener('DOMContentLoaded', getData);
     filter.addEventListener('click', filterIt);
-    add.addEventListener('click', addToCart);
+    
 }
 
 init();
