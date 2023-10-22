@@ -231,7 +231,7 @@
         "description": "This is a book."
     },
     {
-        "name": "book5",
+        "name": "book8",
         "class": "books",
         "image": "b4.webp",
         "price": "600",
@@ -254,7 +254,7 @@
     {
         "name": "xbox",
         "class": "electronics",
-        "image": "b6.webp",
+        "image": "elec7.jpg",
         "price": "1",
         "description": "This is a gaming platform."
     }

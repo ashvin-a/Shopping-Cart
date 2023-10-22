@@ -1,10 +1,34 @@
 const grid = document.querySelector('.item-grid');
 const filter = document.querySelector('.filter');
 const cartlist = document.querySelector('.cart');
+const summary = document.querySelector('.summary');
 
+async function adjustQuantity(e) {
+    const res = await fetch('./items.json');
+    const datas = await res.json();
+    if (e.target.tagName === 'BUTTON') {
+        let itemname = e.target.parentNode.innerText.split('\n')[0];
+        let previtemcount = e.target.parentNode.innerText.split('\n')[2];
+        datas.forEach((data) => {
+            if (data.name === itemname) {
+                if (e.target.innerText === '+') {
+                    cart.push(itemname);
+                    previtemcount += 1;
+                    total += parseInt(data.price);
+                } else if (e.target.innerText === '-') {
+                    cart.pop(itemname);
+                    previtemcount -= 1;
+                    if (total !== 0) {
+                        total -= data.price;
+                    }
+                }
+            }
+        });
+        reloadCart();
+    }
+}
 function reloadCart() {
     const tot = document.querySelector('.total');
-    const summary = document.querySelector('.summary');
     tot.innerHTML = `Total Amount:<strong>₹${total}</strong>`;
 
     const itemcount = cart.reduce((acc, curr) => {
@@ -15,7 +39,7 @@ function reloadCart() {
     for (let key in itemcount) {
         const itemshow = document.createElement('div');
         itemshow.className = 'itemshow';
-        if (itemcount[key] === 1) {
+        if (itemcount[key] == 1) {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
             summary.appendChild(itemshow);
@@ -23,9 +47,8 @@ function reloadCart() {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
             summary.appendChild(itemshow);
-            summary.removeChild(itemshow.previousSibling)
-            console.log(itemshow)
-        } 
+            summary.removeChild(itemshow.previousSibling);
+        }
     }
 }
 
@@ -108,6 +131,7 @@ function init() {
     document.addEventListener('click', addToCart);
     filter.addEventListener('click', filterIt);
     cartlist.addEventListener('click', carton);
+    summary.addEventListener('click', adjustQuantity);
 }
 
 init();
