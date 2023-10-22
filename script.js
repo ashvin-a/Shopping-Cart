@@ -17,6 +17,7 @@ async function adjustQuantity(e) {
                     total += parseInt(data.price);
                 } else if (e.target.innerText === '-') {
                     cart.pop(itemname);
+                    // cart = cart.filter((item)=>item!==itemname)
                     previtemcount -= 1;
                     if (total !== 0) {
                         total -= data.price;
@@ -35,20 +36,21 @@ function reloadCart() {
         acc[curr] ? acc[curr]++ : (acc[curr] = 1);
         return acc;
     }, {});
-
     for (let key in itemcount) {
         const itemshow = document.createElement('div');
         itemshow.className = 'itemshow';
         if (itemcount[key] == 1) {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
-            summary.appendChild(itemshow);
-        } else {
+            console.log(itemshow)
+        }
+        else {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
             summary.appendChild(itemshow);
             summary.removeChild(itemshow.previousSibling);
         }
+        summary.appendChild(itemshow);
     }
 }
 

@@ -180,6 +180,10 @@ span.price {
     font-size: 20px;
 }
 
+.addtocart button:active{
+    background-color: rgb(21, 46, 104);
+}
+
 .cartlist{
     display: flex;
     flex-direction: column;
