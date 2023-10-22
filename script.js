@@ -1,11 +1,19 @@
 const grid = document.querySelector('.item-grid');
 const filter = document.querySelector('.filter');
-const items = grid.querySelectorAll('.item')
-// console.log(items)
+
+
+function reloadCart() {
+    // console.log('added to cart')
+}
+
+
+
 function addToCart(e) {
-    e.preventDefault();
-    // const cart = document.querySelectorAll('.addtocart')
-    console.log('heh');
+    if (e.target.className == 'addcart') {
+        console.log(e.target.parentClass)
+
+        reloadCart()
+    }
 }
 
 function filterIt(e) {
@@ -39,7 +47,7 @@ function buildPage(data) {
     div2.className = data.class;
     tag.innerHTML = `<span class='name'>${data.name}</span>
     <span class='price'>₹${data.price}</span>`;
-    addToCart.innerHTML = `<button>Add to Cart</button>`;
+    addToCart.innerHTML = `<button class ='addcart'>Add to Cart</button>`;
     div.appendChild(div2);
     div.style.boxShadow = '10px 10px 10px 10px rgba(0, 0, 0, 0.2)';
     div.classList.add('item');
@@ -68,6 +76,7 @@ async function getData() {
 
 function init() {
     document.addEventListener('DOMContentLoaded', getData);
+    document.addEventListener('click',addToCart)
     filter.addEventListener('click', filterIt);
     
 }
