@@ -24,7 +24,8 @@ function reloadCart() {
             <button>+</button>${itemcount[key]}<button>-</button>`;
             summary.appendChild(itemshow);
             summary.removeChild(itemshow.previousSibling)
-        }
+            console.log(itemshow)
+        } 
     }
 }
 

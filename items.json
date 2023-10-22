@@ -51,7 +51,7 @@
     {
         "name": "home2",
         "class": "home",
-        "image": "home2.jpeg",  
+        "image": "home2.jpeg",
         "price": "20000",
         "description": "This is a home appliance"
     },
@@ -250,5 +250,12 @@
         "image": "b6.webp",
         "price": "700",
         "description": "This is a book."
+    },
+    {
+        "name": "xbox",
+        "class": "electronics",
+        "image": "b6.webp",
+        "price": "1",
+        "description": "This is a gaming platform."
     }
 ]
