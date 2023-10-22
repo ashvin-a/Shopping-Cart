@@ -34,12 +34,10 @@ body {
     column-gap: 0px;
     position: fixed;
     z-index: 0;
-    /* height: 40px; */
     width: 100%;
     background-color: #ffffff;
     top: 0px;
     left: 0px;
-    /* margin-bottom: 10px; */
     margin-top: 71px;
     align-items: baseline;
     justify-items: center;
@@ -77,7 +75,6 @@ body {
     display: none;
 }
 .navbar * {
-    /* margin: 8px; */
     cursor: pointer;
 }
 
@@ -103,7 +100,6 @@ body {
 }
 .search i {
     padding: 20px 10px;
-    /* margin-left: -5px; */
     border-radius: 5px;
 }
 i:hover {
@@ -166,7 +162,6 @@ span.price {
     font-size: 24px;
     font-family: 'Greycliff';
     font-style: bold;
-    /* margin-bottom: 10px; */
 }
 
 .tag{
@@ -200,7 +195,6 @@ span.price {
     font-family: 'Greycliff';
     font-weight: 100;
     padding: 10px;
-    /* jus: center; */
     margin-left: 90px;
     margin-bottom: 5px;
 }
@@ -231,4 +225,10 @@ span.price {
 }
 .summary{
     display: block;
+}
+.itemshow{
+    display: flex;
+    padding: 10px 20px;
+    font-family: 'Greycliff';
+    font-size: 18px;
 }

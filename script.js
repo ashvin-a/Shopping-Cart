@@ -6,9 +6,26 @@ function reloadCart() {
     const tot = document.querySelector('.total');
     const summary = document.querySelector('.summary');
     tot.innerHTML = `Total Amount:<strong>₹${total}</strong>`;
-    const itemshow = document.createElement('div');
-    itemshow.innerText = cart[parseInt(cart.length) - 1];
-    summary.appendChild(itemshow);
+
+    const itemcount = cart.reduce((acc, curr) => {
+        acc[curr] ? acc[curr]++ : (acc[curr] = 1);
+        return acc;
+    }, {});
+
+    for (let key in itemcount) {
+        const itemshow = document.createElement('div');
+        itemshow.className = 'itemshow';
+        if (itemcount[key] === 1) {
+            itemshow.innerHTML = `${key}
+            <button>+</button>${itemcount[key]}<button>-</button>`;
+            summary.appendChild(itemshow);
+        } else {
+            itemshow.innerHTML = `${key}
+            <button>+</button>${itemcount[key]}<button>-</button>`;
+            summary.appendChild(itemshow);
+            summary.removeChild(itemshow.previousSibling)
+        }
+    }
 }
 
 let cart = [];
