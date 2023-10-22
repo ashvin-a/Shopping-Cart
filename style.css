@@ -184,3 +184,51 @@ span.price {
     font-family: 'Greycliff';
     font-size: 20px;
 }
+
+.cartlist{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.873);
+    right:-300px;
+    top: 135px;
+    width: 300px;
+    height: calc(100% - 100px);
+    transition: 0.2s ease;
+}
+.cartlist h1{
+    font-family: 'Greycliff';
+    font-weight: 100;
+    padding: 10px;
+    /* jus: center; */
+    margin-left: 90px;
+    margin-bottom: 5px;
+}
+.cartlist hr{
+    width: 200px;
+    margin-left: 45px;
+
+}
+
+.carton{
+    right: 0px;
+}
+
+.total{
+    display: flex;
+    background-color: rgb(13, 73, 122);
+    height: 70px;
+    position: fixed;
+    width: 285px;
+    bottom: 0px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Greycliff';
+    font-size: 24px;
+}
+.summary{
+    display: block;
+}

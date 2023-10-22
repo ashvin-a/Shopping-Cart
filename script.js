@@ -1,19 +1,31 @@
 const grid = document.querySelector('.item-grid');
 const filter = document.querySelector('.filter');
-
+const cartlist = document.querySelector('.cart');
 
 function reloadCart() {
-    // console.log('added to cart')
+    const tot = document.querySelector('.total');
+    const summary = document.querySelector('.summary');
+    tot.innerHTML = `Total Amount:<strong>₹${total}</strong>`;
+    const itemshow = document.createElement('div');
+    itemshow.innerText = cart[parseInt(cart.length) - 1];
+    summary.appendChild(itemshow);
 }
 
-
-
+let cart = [];
+let total = 0;
 function addToCart(e) {
     if (e.target.className == 'addcart') {
-        console.log(e.target.parentClass)
-
-        reloadCart()
+        let detail =
+            e.target.parentNode.previousElementSibling.innerText.split('\n');
+        cart.push(detail[0]);
+        total += parseFloat(detail[1].substring(1));
+        reloadCart();
     }
+}
+
+function carton(e) {
+    const cartl = document.querySelector('.cartlist');
+    cartl.classList.toggle('carton');
 }
 
 function filterIt(e) {
@@ -33,7 +45,6 @@ function filterIt(e) {
         });
     }
 }
-
 
 function buildPage(data) {
     const addToCart = document.createElement('div');
@@ -76,9 +87,9 @@ async function getData() {
 
 function init() {
     document.addEventListener('DOMContentLoaded', getData);
-    document.addEventListener('click',addToCart)
+    document.addEventListener('click', addToCart);
     filter.addEventListener('click', filterIt);
-    
+    cartlist.addEventListener('click', carton);
 }
 
 init();
