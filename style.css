@@ -7,7 +7,7 @@
     margin: 0px;
     padding: 0px;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -53,10 +53,10 @@ body {
 .sm-filter:hover {
     background-color: #cccccc8e;
 }
-.active{
+.active {
     background-color: #ccc;
 }
-.active:hover{
+.active:hover {
     background-color: #ccc;
 }
 .navbar {
@@ -94,14 +94,7 @@ body {
 .navbar a:hover {
     background-color: #ccc;
 }
-.search {
-    display: flex;
-    align-items: center;
-}
-.search i {
-    padding: 20px 10px;
-    border-radius: 5px;
-}
+
 i:hover {
     background-color: #ccc;
 }
@@ -115,15 +108,6 @@ input[type='search'] {
     background-color: #cccccc4d;
     font-size: 16px;
     font-family: 'Greycliff';
-}
-
-input[type='search']:hover {
-    box-shadow: 1px 0px 1px 4px rgba(255, 255, 255, 0.192);
-}
-
-input[type='search']:focus {
-    box-shadow: 8px 5px 10px 4px rgba(85, 85, 85, 0.2);
-    border: 0.5px solid #ccc;
 }
 
 .item-grid {
@@ -164,12 +148,12 @@ span.price {
     font-style: bold;
 }
 
-.tag{
+.tag {
     display: flex;
     justify-content: space-between;
 }
 
-.addtocart button{
+.addtocart button {
     padding: 10px;
     width: 100%;
     background-color: rgb(13, 73, 122);
@@ -180,39 +164,38 @@ span.price {
     font-size: 20px;
 }
 
-.addtocart button:active{
+.addtocart button:active {
     background-color: rgb(21, 46, 104);
 }
 
-.cartlist{
+.cartlist {
     display: flex;
     flex-direction: column;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.873);
-    right:-300px;
+    right: -300px;
     top: 135px;
     width: 300px;
     height: calc(100% - 100px);
     transition: 0.2s ease;
 }
-.cartlist h1{
+.cartlist h1 {
     font-family: 'Greycliff';
     font-weight: 100;
     padding: 10px;
     margin-left: 90px;
     margin-bottom: 5px;
 }
-.cartlist hr{
+.cartlist hr {
     width: 200px;
     margin-left: 45px;
-
 }
 
-.carton{
+.carton {
     right: 0px;
 }
 
-.total{
+.total {
     display: flex;
     background-color: rgb(13, 73, 122);
     height: 70px;
@@ -227,17 +210,17 @@ span.price {
     font-family: 'Greycliff';
     font-size: 24px;
 }
-.summary{
+.summary {
     display: block;
 }
-.itemshow{
+.itemshow {
     display: flex;
     padding: 10px 20px;
     font-family: 'Greycliff';
     font-size: 18px;
 }
-.itemshow button{
-    padding:1px 7px;
+.itemshow button {
+    padding: 1px 7px;
     margin: 0px 10px;
     color: white;
     font-size: 20px;
