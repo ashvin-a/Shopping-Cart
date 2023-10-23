@@ -17,8 +17,11 @@ async function adjustQuantity(e) {
                     total += parseInt(data.price);
                 } else if (e.target.innerText === '-') {
                     cart.pop(itemname);
-                    // cart = cart.filter((item)=>item!==itemname)
-                    previtemcount -= 1;
+                    if (previtemcount === 1) {
+                        summary.removeChild(e.target.parentNode);
+                    } else {
+                        previtemcount -= 1;
+                    }
                     if (total !== 0) {
                         total -= data.price;
                     }
@@ -39,12 +42,12 @@ function reloadCart() {
     for (let key in itemcount) {
         const itemshow = document.createElement('div');
         itemshow.className = 'itemshow';
+
         if (itemcount[key] == 1) {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
-            console.log(itemshow)
-        }
-        else {
+            console.log(itemshow);
+        } else {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
             summary.appendChild(itemshow);
