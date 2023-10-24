@@ -1,5 +1,5 @@
 [
-    {
+    {   "id":"001",
         "name": "speakers",
         "class": "electronics",
         "image": "elec1.jpg",
@@ -7,6 +7,7 @@
         "description": "This is a speaker"
     },
     {
+        "id":"002",
         "name": "book1",
         "class": "books",
         "image": "b1.webp",
@@ -14,6 +15,7 @@
         "description": "This is a book."
     },
     {
+        "id":"003",
         "name": "home3",
         "class": "home",
         "image": "home3.jpeg",
@@ -21,6 +23,7 @@
         "description": "This is a home appliance"
     },
     {
+        "id":"004",
         "name": "headset",
         "class": "electronics",
         "image": "elec2.avif",
@@ -28,6 +31,7 @@
         "description": "This is a headset"
     },
     {
+        "id":"005",
         "name": "book5",
         "class": "books",
         "image": "b5.webp",
@@ -35,6 +39,7 @@
         "description": "This is a book."
     },
     {
+        "id":"006",
         "name": "home",
         "class": "home",
         "image": "home4.jpeg",
@@ -43,6 +48,7 @@
     },
     
     {
+        "id":"007",
         "name": "home6",
         "class": "home",
         "image": "home6.webp",
@@ -50,6 +56,7 @@
         "description": "This is a home appliance"
     },
     {
+        "id":"008",
         "name": "food1",
         "class": "food",
         "image": "fo1.webp",
@@ -57,6 +64,7 @@
         "description": "This is food"
     },
     {
+        "id":"009",
         "name": "food2",
         "class": "food",
         "image": "fo2.webp",
@@ -64,6 +72,7 @@
         "description": "This is food"
     },
     {
+        "id":"010",
         "name": "laptop1",
         "class": "electronics",
         "image": "elec3.jpeg",
@@ -71,6 +80,7 @@
         "description": "This is laptop1"
     },
     {
+        "id":"011",
         "name": "food3",
         "class": "food",
         "image": "fo3.webp",
@@ -79,6 +89,7 @@
     },
     
     {
+        "id":"012",
         "name": "home5",
         "class": "home",
         "image": "home5.webp",
@@ -86,6 +97,7 @@
         "description": "This is a home appliance"
     },
     {
+        "id":"013",
         "name": "food5",
         "class": "food",
         "image": "fo5.webp",
@@ -93,6 +105,7 @@
         "description": "This is food"
     },
     {
+        "id":"014",
         "name": "laptop2",
         "class": "electronics",
         "image": "elec4.avif",
@@ -100,6 +113,7 @@
         "description": "This is laptop1"
     },
     {
+        "id":"015",
         "name": "food6",
         "class": "food",
         "image": "fo6.webp",
@@ -107,6 +121,7 @@
         "description": "This is food"
     },
     {
+        "id":"016",
         "name": "fashion1",
         "class": "fashion",
         "image": "fa1.avif",
@@ -114,6 +129,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"017",
         "name": "kid5",
         "class": "kids",
         "image": "k5.webp",
@@ -121,6 +137,7 @@
         "description": "This is kids product"
     },
     {
+        "id":"018",
         "name": "fashion2",
         "class": "fashion",
         "image": "fa2.jpg",
@@ -128,6 +145,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"019",
         "name": "fashion3",
         "class": "fashion",
         "image": "fa3.jpg",
@@ -135,6 +153,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"020",
         "name": "home1",
         "class": "home",
         "image": "home1.avif",
@@ -142,6 +161,7 @@
         "description": "This is a home appliance"
     },
     {
+        "id":"021",
         "name": "fashion5",
         "class": "fashion",
         "image": "fa5.webp",
@@ -149,6 +169,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"022",
         "name": "fashion6",
         "class": "fashion",
         "image": "fa6.avif",
@@ -156,6 +177,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"023",
         "name": "kid1",
         "class": "kids",
         "image": "k1.webp",
@@ -163,6 +185,7 @@
         "description": "This is kids product"
     },
     {
+        "id":"024",
         "name": "home2",
         "class": "home",
         "image": "home2.jpeg",
@@ -170,6 +193,7 @@
         "description": "This is a home appliance"
     },
     {
+        "id":"025",
         "name": "kid2",
         "class": "kids",
         "image": "k2.webp",
@@ -177,6 +201,7 @@
         "description": "This is kids product"
     },
     {
+        "id":"026",
         "name": "fashion9",
         "class": "fashion",
         "image": "fa4.jpeg",
@@ -184,6 +209,7 @@
         "description": "This is fashion"
     },
     {
+        "id":"027",
         "name": "book8",
         "class": "books",
         "image": "b4.webp",
@@ -191,6 +217,7 @@
         "description": "This is a book."
     },
     {
+        "id":"028",
         "name": "iphone15",
         "class": "electronics",
         "image": "elec5.jpeg",
@@ -198,6 +225,7 @@
         "description": "This is iphone 15"
     },
     {
+        "id":"029",
         "name": "kid3",
         "class": "kids",
         "image": "k3.webp",
@@ -205,6 +233,7 @@
         "description": "This is kids product"
     },
     {
+        "id":"030",
         "name": "book3",
         "class": "books",
         "image": "b3.webp",
@@ -212,6 +241,7 @@
         "description": "This is a book."
     },
     {
+        "id":"031",
         "name": "kid4",
         "class": "kids",
         "image": "k4.webp",
@@ -220,6 +250,7 @@
     },
     
     {
+        "id":"032",
         "name": "earpods",
         "class": "electronics",
         "image": "elec6.webp",
@@ -227,6 +258,7 @@
         "description": "This is earpods"
     },
     {
+        "id":"033",
         "name": "kid6",
         "class": "kids",
         "image": "k6.webp",
@@ -234,6 +266,7 @@
         "description": "This is kids product"
     },
     {
+        "id":"034",
         "name": "book2",
         "class": "books",
         "image": "b2.webp",
@@ -241,6 +274,7 @@
         "description": "This is a book."
     },
     {
+        "id":"035",
         "name": "book6",
         "class": "books",
         "image": "b6.webp",
@@ -248,6 +282,7 @@
         "description": "This is a book."
     },
     {
+        "id":"036",
         "name": "xbox",
         "class": "electronics",
         "image": "elec7.jpg",
@@ -255,6 +290,7 @@
         "description": "This is a gaming platform."
     },
     {
+        "id":"037",
         "name": "food8",
         "class": "food",
         "image": "fo4.webp",

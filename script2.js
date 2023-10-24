@@ -10,12 +10,14 @@ async function adjustQuantity(e) {
         let itemname = e.target.parentNode.innerText.split('\n')[0];
         let previtemcount = e.target.parentNode.innerText.split('\n')[2];
         datas.forEach((data) => {
-            if (data.name === itemname) {
-                if (e.target.innerText === '+') {
+            if (e.target.innerText === '+') {
+                if (data.name === itemname) {
                     cart.push(itemname);
                     previtemcount += 1;
                     total += parseInt(data.price);
-                } else if (e.target.innerText === '-') {
+                }
+            } else if (e.target.innerText === '-') {
+                if (data.name === itemname) {
                     cart.pop(itemname);
                     if (previtemcount === 1) {
                         summary.removeChild(e.target.parentNode);
@@ -26,15 +28,18 @@ async function adjustQuantity(e) {
                         total -= data.price;
                     }
                 }
-                // if(e.target.innerText === 'X'){
-                //     summary.remove(e.target.parentNode)
-                // }
             }
         });
         reloadCart();
     }
 }
-function reloadCart() {
+let cart = [];
+let total = 0;
+let itemcount = {};
+
+async function reloadCart() {
+    const res = await fetch('./items.json');
+    const datas = await res.json();
     const tot = document.querySelector('.total');
     tot.innerHTML = `Total Amount:<strong>₹${total}</strong>`;
 
@@ -42,35 +47,50 @@ function reloadCart() {
         acc[curr] ? acc[curr]++ : (acc[curr] = 1);
         return acc;
     }, {});
+
+    // datas.find((data)=>{
+    //     if(data.name ===)
+    //     return data.id
+    // })
+    const itemshow = document.createElement('div');
     for (let key in itemcount) {
-        const itemshow = document.createElement('div');
         itemshow.className = 'itemshow';
         itemshow.style.display = 'flex';
-        itemshow.style.justifyContent = 'space-between'
 
-        if (itemcount[key] == 1) {
-            itemshow.innerHTML = `${key}
-            <button>+</button>${itemcount[key]}<button>-</button><button>X</button>`;
-        } else {
-            itemshow.innerHTML = `${key}
-            <button>+</button>${itemcount[key]}<button>-</button><button>X</button>`;
-            summary.appendChild(itemshow);
-            summary.removeChild(itemshow.previousSibling);
-        }
-        summary.appendChild(itemshow);
+        // itemshow.style.justifyContent = 'space-between';
+        console.log(itemcount.key)
+        // if (itemcount.key-1===0) {
+        //     itemshow.innerHTML = `${key}
+        //     <span><button>+</button>${itemcount[key]}<button>-</button></span>`;
+            
+        // } else {
+        //     itemshow.innerHTML = `${key}
+        //     <span><button>+</button>${itemcount[key]}<button>-</button></span>`;
+        //     summary.appendChild(itemshow);
+        //     summary.removeChild(itemshow.previousElementSibling)
+        // }
     }
+    summary.appendChild(itemshow);
+    
+    // console.log(itemshow);
 }
 
-let cart = [];
-let total = 0;
-function addToCart(e) {
+async function addToCart(e) {
+    const res = await fetch('./items.json');
+    const datas = await res.json();
     if (e.target.className == 'addcart') {
         let detail =
             e.target.parentNode.previousElementSibling.innerText.split('\n');
-        cart.push(detail[0]);
+        // cart.push(detail[0]);
+        datas.find((data) => {
+            if (data.name === detail[0]) {
+                const name = data.name;
+                cart.push(name);
+            }
+        });
         total += parseFloat(detail[1].substring(1));
-        reloadCart();
     }
+    reloadCart();
 }
 
 function carton(e) {
