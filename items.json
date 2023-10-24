@@ -7,53 +7,11 @@
         "description": "This is a speaker"
     },
     {
-        "name": "headset",
-        "class": "electronics",
-        "image": "elec2.avif",
-        "price": "3000",
-        "description": "This is a headset"
-    },
-    {
-        "name": "laptop1",
-        "class": "electronics",
-        "image": "elec3.jpeg",
-        "price": "60000",
-        "description": "This is laptop1"
-    },
-    {
-        "name": "laptop2",
-        "class": "electronics",
-        "image": "elec4.avif",
-        "price": "50000",
-        "description": "This is laptop1"
-    },
-    {
-        "name": "iphone15",
-        "class": "electronics",
-        "image": "elec5.jpeg",
-        "price": "100000",
-        "description": "This is iphone 15"
-    },
-    {
-        "name": "earpods",
-        "class": "electronics",
-        "image": "elec6.webp",
-        "price": "2000",
-        "description": "This is earpods"
-    },
-    {
-        "name": "home1",
-        "class": "home",
-        "image": "home1.avif",
-        "price": "10000",
-        "description": "This is a home appliance"
-    },
-    {
-        "name": "home2",
-        "class": "home",
-        "image": "home2.jpeg",
-        "price": "20000",
-        "description": "This is a home appliance"
+        "name": "book1",
+        "class": "books",
+        "image": "b1.webp",
+        "price": "600",
+        "description": "This is a book."
     },
     {
         "name": "home3",
@@ -63,19 +21,27 @@
         "description": "This is a home appliance"
     },
     {
+        "name": "headset",
+        "class": "electronics",
+        "image": "elec2.avif",
+        "price": "3000",
+        "description": "This is a headset"
+    },
+    {
+        "name": "book5",
+        "class": "books",
+        "image": "b5.webp",
+        "price": "600",
+        "description": "This is a book."
+    },
+    {
         "name": "home",
         "class": "home",
         "image": "home4.jpeg",
         "price": "10000",
         "description": "This is a home appliance"
     },
-    {
-        "name": "home5",
-        "class": "home",
-        "image": "home5.webp",
-        "price": "60000",
-        "description": "This is a home appliance"
-    },
+    
     {
         "name": "home6",
         "class": "home",
@@ -98,18 +64,26 @@
         "description": "This is food"
     },
     {
+        "name": "laptop1",
+        "class": "electronics",
+        "image": "elec3.jpeg",
+        "price": "60000",
+        "description": "This is laptop1"
+    },
+    {
         "name": "food3",
         "class": "food",
         "image": "fo3.webp",
         "price": "600",
         "description": "This is food"
     },
+    
     {
-        "name": "food8",
-        "class": "food",
-        "image": "fo4.webp",
-        "price": "600",
-        "description": "This is food"
+        "name": "home5",
+        "class": "home",
+        "image": "home5.webp",
+        "price": "60000",
+        "description": "This is a home appliance"
     },
     {
         "name": "food5",
@@ -117,6 +91,13 @@
         "image": "fo5.webp",
         "price": "600",
         "description": "This is food"
+    },
+    {
+        "name": "laptop2",
+        "class": "electronics",
+        "image": "elec4.avif",
+        "price": "50000",
+        "description": "This is laptop1"
     },
     {
         "name": "food6",
@@ -133,6 +114,13 @@
         "description": "This is fashion"
     },
     {
+        "name": "kid5",
+        "class": "kids",
+        "image": "k5.webp",
+        "price": "600",
+        "description": "This is kids product"
+    },
+    {
         "name": "fashion2",
         "class": "fashion",
         "image": "fa2.jpg",
@@ -147,11 +135,11 @@
         "description": "This is fashion"
     },
     {
-        "name": "fashion9",
-        "class": "fashion",
-        "image": "fa4.jpeg",
-        "price": "600",
-        "description": "This is fashion"
+        "name": "home1",
+        "class": "home",
+        "image": "home1.avif",
+        "price": "10000",
+        "description": "This is a home appliance"
     },
     {
         "name": "fashion5",
@@ -175,6 +163,13 @@
         "description": "This is kids product"
     },
     {
+        "name": "home2",
+        "class": "home",
+        "image": "home2.jpeg",
+        "price": "20000",
+        "description": "This is a home appliance"
+    },
+    {
         "name": "kid2",
         "class": "kids",
         "image": "k2.webp",
@@ -182,53 +177,11 @@
         "description": "This is kids product"
     },
     {
-        "name": "kid3",
-        "class": "kids",
-        "image": "k3.webp",
+        "name": "fashion9",
+        "class": "fashion",
+        "image": "fa4.jpeg",
         "price": "600",
-        "description": "This is kids product"
-    },
-    {
-        "name": "kid4",
-        "class": "kids",
-        "image": "k4.webp",
-        "price": "600",
-        "description": "This is kids product"
-    },
-    {
-        "name": "kid5",
-        "class": "kids",
-        "image": "k5.webp",
-        "price": "600",
-        "description": "This is kids product"
-    },
-    {
-        "name": "kid6",
-        "class": "kids",
-        "image": "k6.webp",
-        "price": "600",
-        "description": "This is kids product"
-    },
-    {
-        "name": "book1",
-        "class": "books",
-        "image": "b1.webp",
-        "price": "600",
-        "description": "This is a book."
-    },
-    {
-        "name": "book2",
-        "class": "books",
-        "image": "b2.webp",
-        "price": "600",
-        "description": "This is a book."
-    },
-    {
-        "name": "book3",
-        "class": "books",
-        "image": "b3.webp",
-        "price": "600",
-        "description": "This is a book."
+        "description": "This is fashion"
     },
     {
         "name": "book8",
@@ -238,9 +191,52 @@
         "description": "This is a book."
     },
     {
-        "name": "book5",
+        "name": "iphone15",
+        "class": "electronics",
+        "image": "elec5.jpeg",
+        "price": "100000",
+        "description": "This is iphone 15"
+    },
+    {
+        "name": "kid3",
+        "class": "kids",
+        "image": "k3.webp",
+        "price": "600",
+        "description": "This is kids product"
+    },
+    {
+        "name": "book3",
         "class": "books",
-        "image": "b5.webp",
+        "image": "b3.webp",
+        "price": "600",
+        "description": "This is a book."
+    },
+    {
+        "name": "kid4",
+        "class": "kids",
+        "image": "k4.webp",
+        "price": "600",
+        "description": "This is kids product"
+    },
+    
+    {
+        "name": "earpods",
+        "class": "electronics",
+        "image": "elec6.webp",
+        "price": "2000",
+        "description": "This is earpods"
+    },
+    {
+        "name": "kid6",
+        "class": "kids",
+        "image": "k6.webp",
+        "price": "600",
+        "description": "This is kids product"
+    },
+    {
+        "name": "book2",
+        "class": "books",
+        "image": "b2.webp",
         "price": "600",
         "description": "This is a book."
     },
@@ -257,5 +253,12 @@
         "image": "elec7.jpg",
         "price": "1",
         "description": "This is a gaming platform."
+    },
+    {
+        "name": "food8",
+        "class": "food",
+        "image": "fo4.webp",
+        "price": "600",
+        "description": "This is food"
     }
 ]
