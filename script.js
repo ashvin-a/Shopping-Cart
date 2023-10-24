@@ -15,7 +15,7 @@ function searchIt(e) {
             }
         }
     });
-    if (val.length === 1) {
+    if (val.length < 1) {
         if (e.key === 'Backspace') {
             location.reload();
         }            
