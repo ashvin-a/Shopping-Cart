@@ -46,7 +46,6 @@ function reloadCart() {
         if (itemcount[key] == 1) {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
-            console.log(itemshow);
         } else {
             itemshow.innerHTML = `${key}
             <button>+</button>${itemcount[key]}<button>-</button>`;
