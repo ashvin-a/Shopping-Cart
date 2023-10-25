@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Greycliff';
-    src: url(/Demo_Fonts/Fontspring-DEMO-greycliffcf-light.otf);
+    src: url(./Demo_Fonts/Fontspring-DEMO-greycliffcf-light.otf);
 }
 
 * {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-image: url(/images/7720186.jpg);
+    background-image: url(./images/7720186.jpg);
     background-size: auto 1300px;
     background-repeat: repeat;
 }

@@ -138,13 +138,13 @@ function buildPage(data) {
     div.appendChild(div2);
     div.style.boxShadow = '10px 10px 10px 10px rgba(0, 0, 0, 0.2)';
     div.classList.add('item');
-    div2.innerHTML = `<img src="images/${data.image}" alt="" />`;
+    div2.innerHTML = `<img src="./images/${data.image}" alt="" />`;
     if (
         div.classList.contains('books') ||
         div.classList.contains('food') ||
         div.classList.contains('kids')
     ) {
-        div2.innerHTML = `<img src="images/${data.image}" alt=""
+        div2.innerHTML = `<img src="./images/${data.image}" alt=""
         style="width:170px"/>`;
     }
     div2.appendChild(tag);
