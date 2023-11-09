@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Greycliff';
+    src: url(./Demo_Fonts/Fontspring-DEMO-greycliffcf-light.otf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(./images/7720186.jpg);
+    background-size: auto 1300px;
+    background-repeat: repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.top {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 0px;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    background-color: #ffffff;
+    top: -20px;
+    left: 0px;
+    margin-top: 71px;
+    align-items: baseline;
+    justify-items: center;
+    box-shadow: 10px 1px 10px 10px rgba(166, 166, 166, 0.703);
+}
+.sm-filter {
+    padding: 20px 60px;
+    border: 0.5px solid #cccccc00;
+    background-color: #ffffff;
+    font-family: 'Greycliff';
+    font-size: 18px;
+}
+.sm-filter:hover {
+    background-color: #cccccc8e;
+}
+.active {
+    background-color: #ccc;
+}
+.active:hover {
+    background-color: #ccc;
+}
+.navbar {
+    z-index: 1;
+    position: fixed;
+    padding: 10px 0px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    border: 0.5px solid rgba(255, 255, 255, 0.021);
+    background-color: #ffffff;
+}
+.none {
+    display: none;
+}
+.navbar * {
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-family: 'Greycliff';
+    font-size: 20px;
+    border-radius: 5px;
+}
+.navbar i {
+    padding: 20px 5px;
+    border: 0.5px solid #cccccc00;
+    border-radius: 10px;
+}
+.navbar a:hover {
+    background-color: #ccc;
+}
+
+i:hover {
+    background-color: #ccc;
+}
+
+input[type='search'] {
+    padding: 6px;
+    border: 0.5px solid #ccc;
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #cccccc4d;
+    font-size: 16px;
+    font-family: 'Greycliff';
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
+    margin: 20px;
+    margin-top: 210px;
+}
+
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border: 0.5px solid #cccccc00;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    height: 200px;
+    width: 300px;
+}
+.item p {
+    z-index: 0;
+    text-align: justify;
+    font-family: 'Greycliff';
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+span.name,
+span.price {
+    color: rgb(16, 51, 79);
+    font-size: 30px;
+    font-family: sans-serif;
+    font-style: bold;
+    text-transform: uppercase;
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addtocart button {
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(13, 73, 122);
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.addtocart button:active {
+    background-color: rgb(21, 46, 104);
+}
+
+.cartlist {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.873);
+    right: -300px;
+    top: 110px;
+    width: 300px;
+    height: calc(100% - 100px);
+    transition: 0.2s ease;
+}
+.cartlist h1 {
+    font-family: 'Greycliff';
+    font-weight: 100;
+    padding: 10px;
+    margin-left: 90px;
+    margin-bottom: 5px;
+}
+.cartlist hr {
+    width: 200px;
+    margin-left: 45px;
+}
+
+.carton {
+    right: 0px;
+}
+
+.total {
+    display: flex;
+    background-color: rgb(13, 73, 122);
+    height: 70px;
+    position: fixed;
+    width: 285px;
+    bottom: 0px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+.summary {
+    display: block;
+}
+.itemshow {
+    display: flex;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.itemshow button {
+    padding: 1px 7px;
+    margin: 0px 10px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(13, 73, 122);
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+}
